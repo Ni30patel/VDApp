@@ -11,7 +11,7 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 	Button button;
 	 //Test comment
-//	Test comment1
+	 //Test comment1
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
