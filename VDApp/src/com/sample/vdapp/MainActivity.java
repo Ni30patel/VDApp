@@ -67,7 +67,7 @@ public class MainActivity extends Activity implements OnClickListener{
 			if (validateCredential(uname, password)) {
 				// Start NewActivity.class
 				Intent myIntent = new Intent(MainActivity.this,
-						VideoViewActivity.class);
+						ListActivity.class);
 				startActivity(myIntent);
 			} else {
 				Toast.makeText(MainActivity.this, "Enter Valid Credentials", Toast.LENGTH_SHORT).show();
