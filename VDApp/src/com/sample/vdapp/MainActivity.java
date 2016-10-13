@@ -8,12 +8,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener{
 	private Button button;
 	private EditText edt_uname,edt_password;
 	private boolean validateFlag;
+	private TextView txt_newuser,txt_forgotpass;
 	 //Test comment
 	 //Test comment1
 	@Override
@@ -41,6 +43,11 @@ public class MainActivity extends Activity implements OnClickListener{
 		try {
 			edt_uname = (EditText) findViewById(R.id.edt_uname);
 			edt_password = (EditText) findViewById(R.id.edt_password);
+			
+			txt_newuser = (TextView) findViewById(R.id.txt_newuser);
+			txt_forgotpass = (TextView) findViewById(R.id.txt_forgotpass);
+			txt_newuser.setOnClickListener(this);
+			txt_forgotpass.setOnClickListener(this);
 			
 			button = (Button) findViewById(R.id.MyButton);
 			button.setOnClickListener(this);
@@ -74,6 +81,16 @@ public class MainActivity extends Activity implements OnClickListener{
 			}			
 			break;
 
+		case R.id.txt_newuser:
+			Intent myIntent = new Intent(MainActivity.this,
+					RegistrationActivity.class);
+			startActivity(myIntent);
+			break;
+		case R.id.txt_forgotpass:
+			Intent in = new Intent(MainActivity.this,
+					ForgotPasswordActivity.class);
+			startActivity(in);
+			break;
 		default:
 			break;
 		}

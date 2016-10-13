@@ -16,7 +16,7 @@
         <TextView android:id="@+id/txt_uname"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Email/User Name"
+            android:text="@string/uname"
             android:layout_weight=".5"
             android:textColor="#000"
             android:textSize="16sp"
@@ -51,10 +51,29 @@
             android:inputType="textPassword"/>
     </LinearLayout>
     
+     <TextView android:id="@+id/txt_forgotpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_pass"
+        android:textColor="#00f"
+        android:textStyle="bold"
+        android:gravity="right"
+        android:layout_marginTop="5dp"
+        android:clickable="true"/>    
+    
    <Button
         android:id="@+id/MyButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:text="@string/login" />
  
+   <TextView android:id="@+id/txt_newuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_user"
+        android:textColor="#00f"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:clickable="true"/>  
 </LinearLayout>

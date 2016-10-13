@@ -4,5 +4,25 @@
     <string name="app_name">VDApp</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="fname">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="email">Email</string>
+    <string name="phno">Phone No</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="new_password">New Password</string>
+    <string name="con_password">Confirm Password</string>
+    <string name="uname">UserName</string>
+    <string name="exits_login">Exitsing User? Login Here</string>
+    <string name="new_user">New User? Register Here</string>
+    <string name="otp_msg">OTP has been sent to 98989898 kindly enter here to register with us.</string>
+    <string name="otp">OTP</string>
+    <string name="resend">Resend OTP</string>
+    <string name="conregister"> Confirm &amp; Register</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="next">Next</string>
+    <string name="change_pass">Change Password</string>
+    
 
 </resources>

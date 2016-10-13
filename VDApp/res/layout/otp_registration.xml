@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp" >
+    
+    <TextView android:id="@+id/txt_otp_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/otp_msg"
+        android:textColor="#000"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/txt_fname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/otp"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_fname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:hint="Enter Code"
+            android:textColor="#000" />
+    </LinearLayout>
+    
+    <TextView android:id="@+id/txt_resend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resend"
+        android:gravity="right"
+        android:textColor="#00f"
+        android:textStyle="bold"/>
+    
+    <Button android:id="@+id/btn_conregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/conregister"
+        android:layout_marginTop="10dp"/>
+    
+    <TextView android:id="@+id/txt_exits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exits_login"
+        android:textColor="#00f"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>
