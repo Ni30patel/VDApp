@@ -36,6 +36,8 @@
         <activity
             android:name=".ChangePasswordActivity"
             android:label="@string/change_pass" />
+        <activity android:name=".OTPRegistrationActivity"
+            android:label="OTPRegistrationActivity"></activity>
     </application>
 
 </manifest>
