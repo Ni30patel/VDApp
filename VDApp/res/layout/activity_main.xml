@@ -48,7 +48,8 @@
             android:hint="Enter Password"
             android:textColor="#000"
             android:layout_weight=".5"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyz@#$A%^&amp;*!."/>
     </LinearLayout>
     
      <TextView android:id="@+id/txt_forgotpass"

@@ -1,8 +1,10 @@
 package com.sample.vdapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
@@ -52,17 +54,26 @@ public class VideoURLAdapter extends BaseAdapter{
 //	        mList[position] = getItem(position);
 	 
 	        mViewHolder.tvTitle.setText(mList[position]);
+	        mViewHolder.txt_play.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					Intent i = new Intent(mContext,VideoViewActivity.class);
+					mContext.startActivity(i);
+				}
+			});
 	 
 	        return convertView;
 	}
 
 	private class MyViewHolder {
-        TextView tvTitle;
+        TextView tvTitle,txt_play;
  
  
         public MyViewHolder(View item) {
             tvTitle = (TextView) item.findViewById(R.id.txt_test);
-          ;
+            txt_play = (TextView) item.findViewById(R.id.txt_play);
         }
     }
 }
