@@ -5,12 +5,10 @@ import android.app.ProgressDialog;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.MediaController;
-import android.widget.VideoView;
 
 public class VideoViewActivity extends Activity {
 	 
@@ -48,7 +46,9 @@ public class VideoViewActivity extends Activity {
 			        Log.d("TAG",""+position);
 			        Log.d("TAG_DUR",""+cVideoView.getDuration());
 			        Log.d("TAG_buf",""+cVideoView.getBufferPercentage());
-			        
+			        AsyncTaskRunner runner = new AsyncTaskRunner();
+			        String sleepTime = String.valueOf(cVideoView.getDuration());
+			        runner.execute(sleepTime);
 			    }
 			});
 
@@ -121,4 +121,27 @@ public class VideoViewActivity extends Activity {
 	 
 		}
 	 
+		String resp;
+		private class AsyncTaskRunner extends AsyncTask<String, String, String> {
+
+			@Override
+			protected String doInBackground(String... params) {
+				try {
+					
+				    // Do your long operations here and return the result
+				    int time = Integer.parseInt(params[0]);    
+				    // Sleeping for given time period
+				    Thread.sleep(time);
+				    resp = "Slept for " + time + " milliseconds";
+				   } catch (InterruptedException e) {
+				    e.printStackTrace();
+				    resp = e.getMessage();
+				   } catch (Exception e) {
+				    e.printStackTrace();
+				    resp = e.getMessage();
+				   }
+				   return resp;
+			}
+			
+		}
 	}
