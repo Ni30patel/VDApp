@@ -105,7 +105,10 @@ public class MainActivity extends Activity implements OnClickListener {
 				validateFlag = true;
 			} else {
 				validateFlag = false;
-				Toast.makeText(MainActivity.this,"Minimum 8 Characters Required", Toast.LENGTH_SHORT).show();
+				if(password.length() < 8 && password.length() > 0)
+				{
+					Toast.makeText(MainActivity.this,"Minimum 8 Characters Required", Toast.LENGTH_SHORT).show();
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -19,13 +19,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class OTPRegistrationActivity extends Activity implements
 		OnClickListener {
 	private Button btn_conregister;
 	private EditText edt_otp;
-	private String mOTP, sessionID;
+	private String mOTP, sessionID,phno;
+	private TextView txt_otp_msg;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class OTPRegistrationActivity extends Activity implements
 		Bundle b = getIntent().getExtras();
 		if (null != b) {
 			sessionID = b.getString("SessionId");
+			phno = b.getString("phno");
 		}
 
 		init();
@@ -49,6 +52,8 @@ public class OTPRegistrationActivity extends Activity implements
 
 			edt_otp = (EditText) findViewById(R.id.edt_otp);
 			
+			txt_otp_msg = (TextView) findViewById(R.id.txt_otp_msg);
+			txt_otp_msg.setText("OTP has been sent to "+ phno +" kindly enter here to register with us.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

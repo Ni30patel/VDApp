@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class ForgotPasswordActivity extends Activity implements OnClickListener {
 
 	private Button btn_next;
 	private TextView txt_newuser, txt_exits;
+	private EditText edt_uname;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,8 @@ public class ForgotPasswordActivity extends Activity implements OnClickListener 
 
 			btn_next = (Button) findViewById(R.id.btn_next);
 			btn_next.setOnClickListener(this);
+			
+			edt_uname = (EditText) findViewById(R.id.edt_uname);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -43,6 +47,7 @@ public class ForgotPasswordActivity extends Activity implements OnClickListener 
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.btn_next:
+			String mobNo = edt_uname.getText().toString();
 			Intent intent = new Intent(ForgotPasswordActivity.this,
 					ChangePasswordActivity.class);
 			startActivity(intent);

@@ -63,7 +63,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".5"
-            android:text="@string/fname"
+            android:text="@string/mobno"
             android:textColor="#000"
             android:textSize="16sp" />
 
@@ -85,7 +85,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".5"
-            android:text="@string/lname"
+            android:text="@string/mem_date"
             android:textColor="#000"
             android:textSize="16sp" />
 

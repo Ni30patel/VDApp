@@ -16,7 +16,7 @@
         <TextView android:id="@+id/txt_uname"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/uname"
+            android:text="@string/mobno"
             android:layout_weight=".5"
             android:textColor="#000"
             android:textSize="16sp"
@@ -25,7 +25,7 @@
         <EditText android:id="@+id/edt_uname"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Enter Email/UserName"
+            android:hint="Enter MobileNo"
             android:textColor="#000"
             android:layout_weight=".5"/>
     </LinearLayout>

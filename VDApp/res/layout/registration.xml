@@ -63,7 +63,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".5"
-            android:text="@string/phno"
+            android:text="@string/mobno"
             android:textColor="#000"
             android:textSize="16sp"
             android:gravity="left" />
@@ -73,7 +73,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".5"
-            android:hint="Enter Mobile No"
+            android:hint="Enter MobileNo"
             android:textColor="#000"
             android:inputType="number"
             android:maxLength="10" />

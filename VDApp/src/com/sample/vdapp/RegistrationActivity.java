@@ -26,8 +26,8 @@ public class RegistrationActivity extends Activity implements OnClickListener {
 
 	private TextView txt_exits;
 	private Button btn_register;
-	private EditText edt_mno;
-	private String mobno;
+	private EditText edt_mno,edt_fname,edt_lname,edt_password,edt_cpassword;
+	private String mobno,firstName,lastName,pass,crnt_pass;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,11 @@ public class RegistrationActivity extends Activity implements OnClickListener {
 			txt_exits = (TextView) findViewById(R.id.txt_exits);
 			txt_exits.setOnClickListener(this);
 			
-			edt_mno = (EditText) findViewById(R.id.edt_mno);			
+			edt_mno = (EditText) findViewById(R.id.edt_mno);	
+			edt_fname = (EditText) findViewById(R.id.edt_fname);
+			edt_lname = (EditText) findViewById(R.id.edt_lname);
+			edt_password = (EditText) findViewById(R.id.edt_password);
+			edt_cpassword = (EditText) findViewById(R.id.edt_cpassword);
 			
 			btn_register = (Button) findViewById(R.id.btn_register);
 			btn_register.setOnClickListener(this);
@@ -65,6 +69,10 @@ public class RegistrationActivity extends Activity implements OnClickListener {
 
 		case R.id.btn_register:
 			mobno = edt_mno.getText().toString();
+			firstName = edt_fname.getText().toString();
+			lastName = edt_lname.getText().toString();
+			pass = edt_password.getText().toString();
+			crnt_pass = edt_cpassword.getText().toString();
 			if(null != mobno && mobno.length() > 0)
 			{
 				sendOTP();
@@ -130,6 +138,7 @@ public class RegistrationActivity extends Activity implements OnClickListener {
 					if(null != sessionId)
 					{
 						b.putString("SessionId", mBean.getDetails());
+						b.putString("phno", mobno);
 					}
 					intent.putExtras(b);
 					startActivity(intent);

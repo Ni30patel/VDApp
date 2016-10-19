@@ -8,6 +8,7 @@
     <string name="lname">Last Name</string>
     <string name="email">Email</string>
     <string name="phno">Phone No</string>
+    <string name="mobno">Mobile No</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="password">Password</string>
@@ -30,6 +31,6 @@
     <string name="logout">Logout</string>
     <string name="update">Update</string>
     <string name="video">Video List</string>
-    
+    <string name="mem_date">Member Date</string>
 
 </resources>
