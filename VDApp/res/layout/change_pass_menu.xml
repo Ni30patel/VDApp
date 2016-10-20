@@ -28,7 +28,8 @@
             android:hint="Enter password"
             android:textColor="#000"
             android:inputType="textPassword"
-            android:digits="@string/validation" />
+            android:digits="@string/validation"
+            android:fontFamily="sans-serif-bold" />
     </LinearLayout>
     
     <LinearLayout

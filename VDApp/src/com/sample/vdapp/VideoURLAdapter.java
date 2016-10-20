@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class VideoURLAdapter extends BaseAdapter{
@@ -68,12 +69,13 @@ public class VideoURLAdapter extends BaseAdapter{
 	}
 
 	private class MyViewHolder {
-        TextView tvTitle,txt_play;
+        TextView tvTitle;
+        ImageView txt_play;
  
  
         public MyViewHolder(View item) {
             tvTitle = (TextView) item.findViewById(R.id.txt_test);
-            txt_play = (TextView) item.findViewById(R.id.txt_play);
+            txt_play = (ImageView) item.findViewById(R.id.txt_play);
         }
     }
 }

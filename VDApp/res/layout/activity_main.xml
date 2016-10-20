@@ -37,6 +37,7 @@
             android:layout_weight=".5"
             android:inputType="number"
             android:maxLength="10"
+            android:fontFamily="sans-serif-bold"
             android:background="@drawable/edittext_bg"/>
     </LinearLayout>
     
@@ -61,6 +62,7 @@
             android:textColor="#000"
             android:layout_weight=".5"
             android:inputType="textPassword"
+            android:fontFamily="sans-serif-bold"
             android:digits="0123456789abcdefghijklmnopqrstuvwxyz@#$A%^&amp;*!"
             android:background="@drawable/edittext_bg"/>
     </LinearLayout>
