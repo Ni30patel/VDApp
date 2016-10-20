@@ -107,6 +107,10 @@ public class UserProfileActivity extends Activity implements OnClickListener {
 			Intent intent = new Intent(UserProfileActivity.this, ListActivity.class);
 			startActivity(intent);
 			return true;
+		case R.id.action_change_password:
+			Intent chnageIntent = new Intent(UserProfileActivity.this,ChangePasswordMenuActivity.class);
+			startActivity(chnageIntent);
+			return true;
 		case R.id.action_logout:
 			Toast.makeText(UserProfileActivity.this, "logout", Toast.LENGTH_SHORT)
 					.show();

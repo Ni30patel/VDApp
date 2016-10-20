@@ -7,8 +7,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@color/layout_background" >
 
+     <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+    
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -18,29 +24,35 @@
             android:layout_height="wrap_content"
             android:text="@string/mobno"
             android:layout_weight=".5"
-            android:textColor="#000"
+            android:textColor="@color/grey"
             android:textSize="16sp"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress"
+            android:textStyle="bold"/>
         
         <EditText android:id="@+id/edt_uname"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Enter MobileNo"
             android:textColor="#000"
-            android:layout_weight=".5"/>
+            android:layout_weight=".5"
+            android:inputType="number"
+            android:maxLength="10"
+            android:background="@drawable/edittext_bg"/>
     </LinearLayout>
     
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
         
         <TextView android:id="@+id/txt_password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Password"
             android:layout_weight=".5"
-            android:textColor="#000"
-            android:textSize="16sp"/>
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
         
         <EditText android:id="@+id/edt_password"
             android:layout_width="0dp"
@@ -49,32 +61,40 @@
             android:textColor="#000"
             android:layout_weight=".5"
             android:inputType="textPassword"
-            android:digits="0123456789abcdefghijklmnopqrstuvwxyz@#$A%^&amp;*!"/>
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyz@#$A%^&amp;*!"
+            android:background="@drawable/edittext_bg"/>
     </LinearLayout>
     
      <TextView android:id="@+id/txt_forgotpass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/forgot_pass"
-        android:textColor="#00f"
+        android:textColor="@color/blue_light"
         android:textStyle="bold"
         android:gravity="right"
-        android:layout_marginTop="5dp"
-        android:clickable="true"/>    
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        />    
     
    <Button
-        android:id="@+id/MyButton"
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login" />
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
  
    <TextView android:id="@+id/txt_newuser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/new_user"
-        android:textColor="#00f"
+        android:textColor="@color/blue_light"
         android:textStyle="bold"
         android:gravity="center"
         android:layout_marginTop="5dp"
         android:clickable="true"/>  
+        
+   </LinearLayout>
 </LinearLayout>

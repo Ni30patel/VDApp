@@ -15,6 +15,11 @@ public class ListActivity extends Activity{
 	private Context mContext = ListActivity.this;
 	
 	@Override
+	public void onBackPressed() {
+		//call logout webservice
+		finish();		
+	}
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
@@ -43,6 +48,10 @@ public class ListActivity extends Activity{
 		case R.id.action_video_list:
 			Intent intent = new Intent(ListActivity.this,ListActivity.class);
 			startActivity(intent);
+			return true;
+		case R.id.action_change_password:
+			Intent chnageIntent = new Intent(ListActivity.this,ChangePasswordMenuActivity.class);
+			startActivity(chnageIntent);
 			return true;
 		case R.id.action_logout:	
 			Toast.makeText(ListActivity.this, "logout", Toast.LENGTH_SHORT).show();

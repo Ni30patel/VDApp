@@ -48,7 +48,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			txt_newuser.setOnClickListener(this);
 			txt_forgotpass.setOnClickListener(this);
 
-			button = (Button) findViewById(R.id.MyButton);
+			button = (Button) findViewById(R.id.btn_login);
 			button.setOnClickListener(this);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -60,14 +60,21 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
-		case R.id.MyButton:
+		case R.id.btn_login:
 
 			String uname = edt_uname.getText().toString();
 			String password = edt_password.getText().toString();
 
 //			if (AppUtil.isValidPassword(password)) {
-
-				if (validateCredential(uname, password)) {
+			if(uname.length() > 0 && password.length() > 0)
+			{
+				if(password.length() < 8)
+				{
+					Toast.makeText(MainActivity.this,"Minimum 8 Characters Required", Toast.LENGTH_SHORT).show();
+				}else{				
+					validateCredential(uname, password);
+				}
+				/*if (validateCredential(uname, password)) {
 					// Start NewActivity.class
 					Intent myIntent = new Intent(MainActivity.this,
 							ListActivity.class);
@@ -76,7 +83,12 @@ public class MainActivity extends Activity implements OnClickListener {
 					Toast.makeText(MainActivity.this,
 							"Enter Valid Credentials", Toast.LENGTH_SHORT)
 							.show();
-				}
+				}*/
+			}else{
+				Toast.makeText(MainActivity.this,
+						"Enter Valid Credentials", Toast.LENGTH_SHORT)
+						.show();
+			}
 //			} else {
 //				Toast.makeText(MainActivity.this,
 //						"Minimum 8 Characters Required", Toast.LENGTH_SHORT)
@@ -99,21 +111,16 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 	}
 
-	private boolean validateCredential(String uname, String password) {
+	private void validateCredential(String uname, String password) {
 		try {
-			if (uname.length() > 0 && password.length() > 8) {
-				validateFlag = true;
-			} else {
-				validateFlag = false;
-				if(password.length() < 8 && password.length() > 0)
-				{
-					Toast.makeText(MainActivity.this,"Minimum 8 Characters Required", Toast.LENGTH_SHORT).show();
-				}
-			}
+			//call webserivce to verify login
+			Intent myIntent = new Intent(MainActivity.this,
+					ListActivity.class);			
+			startActivity(myIntent);
+			finish();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-		return validateFlag;
+		}		
 	}
 
 }

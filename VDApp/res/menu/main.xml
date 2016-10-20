@@ -6,6 +6,9 @@
     <item
          android:id="@+id/action_video_list"
         android:title="@string/video"/>
+     <item
+        android:id="@+id/action_change_password"
+        android:title="@string/change_pass"/>
     <item
         android:id="@+id/action_logout"
         android:title="@string/logout"/>

@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="16" />
+        android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.INTERNET" >
     </uses-permission>
@@ -40,6 +40,8 @@
             android:label="OTPRegistrationActivity"></activity>
         <activity android:name=".UserProfileActivity"
             android:label="@string/user_profile"></activity>
+        <activity android:name=".ChangePasswordMenuActivity"
+            android:label="@string/change_pass"></activity>
     </application>
 
 </manifest>
