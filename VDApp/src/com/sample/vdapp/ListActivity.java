@@ -11,7 +11,10 @@ import android.widget.Toast;
 
 public class ListActivity extends Activity{
 	private ListView listView;
-	String[] mobileArray = {"Android","IPhone","WindowsMobile","Blackberry","WebOS","Ubuntu","Windows7","Max OS X"};
+	String[] mobileArray = {"Video Caption","Video Caption Video Caption Video Caption"
+			,"Video Caption Video Caption Video Caption","Video Caption","Video Caption Video Caption Video Caption"
+			,"Video Caption","Video Caption Video Caption Video Caption"
+			,"Video Caption"};
 	private Context mContext = ListActivity.this;
 	
 	@Override
